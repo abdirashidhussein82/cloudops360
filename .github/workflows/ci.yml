@@ -16,7 +16,10 @@ jobs:
   test:
     name: Run Python Tests
     runs-on: ubuntu-latest
-
+    env:
+      POSTGRES_DB: cloudops360_test
+      POSTGRES_USER: cloudops360_test
+      POSTGRES_PASSWORD: ci_test_password
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
